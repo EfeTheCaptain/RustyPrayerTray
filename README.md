@@ -5,10 +5,20 @@ A native Windows taskbar prayer widget written in Rust, based on the foundation 
 Because the calculation engine, UI rendering, and window management have been heavily modified, this project is published as a standalone repository rather than a standard GitHub fork. This avoids merge conflicts with upstream changes that no longer apply to this heavily diverged codebase.
 
 ### Original Foundation vs. This Fork
-The original application provided an excellent Win32/GDI+ shell, a robust settings framework, and a complete notification/Azan system. This fork retains that foundation but completely replaces the core data engine, UI layout, and performance architecture.
 <img width="168" height="49" alt="2026-11-13_00-51" src="https://github.com/user-attachments/assets/f9dbdb39-db79-43da-95ea-e9f877f2556c" />
+The original application provided an excellent Win32/GDI+ shell, a robust settings framework, and a complete notification/Azan system. This fork retains that foundation but completely replaces the core data engine, UI layout, and performance architecture.
+
+## ⚡ True Ultra-Lightweight
+
+No background polling, no Electron, no hidden bloat. Because it uses native Win32 GDI+ rendering and the Aladhan API's 7-day caching, the app idles at **0% CPU** and uses just **~5.3 MB of RAM**.
+
+<img width="999" height="131" alt="2026-11-13_02-01" src="https://github.com/user-attachments/assets/b6ed4996-fe06-4ec8-a463-e4609c816cc9" />
+
+---
+
 <img width="341" height="416" alt="2026-11-13_01-53_1" src="https://github.com/user-attachments/assets/a1800c4a-9dfb-4688-8d24-4baa46ae3e85" />
 
+---
 ## What We Changed
 
 *   **Aladhan API Integration:** The offline PrayTimes.org calculation was replaced with the Aladhan API. It fetches a full month of data in one request, caches it for 7 days, and handles offline fallbacks gracefully.
@@ -63,6 +73,13 @@ For a full explanation of this Win32 logic, the atomic file writes, and the thre
 1. Go to the [Releases](../../releases) page.
 2. Download the latest `RustyPrayerTray.exe`.
 3. Run it. It is completely portable (statically linked CRT, no Visual C++ Redistributable required). It supports a portable config file if placed next to the executable.
+---
+
+## ⚖️ Credits & License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Original Work: A huge thank you to dev ghoniem for creating the original PrayerTray and for providing the MIT license to allow this derivative work to exist.
+---
 
 ## 🛠️ Building from Source
 
@@ -72,10 +89,4 @@ Requires Rust and MSVC Build Tools.
 cd rust
 cargo build --release
 
----
 
-## ⚖️ Credits & License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Original Work: A huge thank you to dev ghoniem for creating the original PrayerTray and for providing the MIT license to allow this derivative work to exist.
----
