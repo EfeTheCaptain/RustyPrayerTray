@@ -1,0 +1,38 @@
+# Build output
+bin/
+obj/
+publish/
+release/
+
+# IDE / user
+.vs/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Runtime config (lives in %APPDATA%, never committed)
+config.json
+
+# Rust build artifacts
+/target/
+/rust/target/
+**/*.rs.bk
+
+# Distribution / Release binaries
+/dist/
+/rust/dist/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Debug logs
+*.log
+prayertray_zdebug.log

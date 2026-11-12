@@ -1,0 +1,5 @@
+# Static MSVC runtime: the release exe needs no VC++ Redistributable, so it runs on a
+# clean Windows 10/11 machine. Applies whenever the target is passed explicitly (the
+# portable script and CI both use --target x86_64-pc-windows-msvc).
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
