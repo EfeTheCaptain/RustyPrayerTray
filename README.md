@@ -6,11 +6,14 @@ Because the calculation engine, UI rendering, and window management have been he
 
 ### Original Foundation vs. This Fork
 The original application provided an excellent Win32/GDI+ shell, a robust settings framework, and a complete notification/Azan system. This fork retains that foundation but completely replaces the core data engine, UI layout, and performance architecture.
+<img width="168" height="49" alt="2026-11-13_00-51" src="https://github.com/user-attachments/assets/f9dbdb39-db79-43da-95ea-e9f877f2556c" />
+<img width="341" height="416" alt="2026-11-13_01-53_1" src="https://github.com/user-attachments/assets/a1800c4a-9dfb-4688-8d24-4baa46ae3e85" />
 
 ## What We Changed
 
 *   **Aladhan API Integration:** The offline PrayTimes.org calculation was replaced with the Aladhan API. It fetches a full month of data in one request, caches it for 7 days, and handles offline fallbacks gracefully.
-*   **Calculation Method Dropdown:** The original settings menu for choosing calculation methods was removed during the API rewrite, then intentionally restored. The dropdown now maps directly to the Aladhan API's method IDs, defaulting to Diyanet (Method 13).
+*   **Calculation Method Dropdown:** The original settings menu for choosing calculation methods was removed d![Uploading 2026-11-13_00-51.png…]()
+uring the API rewrite, then intentionally restored. The dropdown now maps directly to the Aladhan API's method IDs, defaulting to Diyanet (Method 13).
 *   **Removed Net Meters:** The network speed, ping, CPU/RAM, VPN, and data usage meters were completely stripped out to keep the app ultra-lightweight and focused purely on prayer times.
 *   **Sunrise Countdown Fix:** The countdown logic now targets Sunrise as the end of the Fajr prayer window. The original app skipped Sunrise entirely and counted down to Dhuhr, which is functionally useless once the Fajr window has closed.
 *   **Hardcoded Streamlined Layout:** All multiple taskbar layout options, fine-tuning menus, and the redundant "Taskbar pill icon" toggle were removed. The pill now uses a single, hardcoded layout: Daily Icon + Prayer Name + Countdown.
