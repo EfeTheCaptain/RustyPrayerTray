@@ -82,7 +82,7 @@ The app uses a **stateless Z-order architecture** to ensure the taskbar widget s
 
 For a full explanation of this Win32 logic, the atomic file writes, and the threading model, see the technical documentation:
 
-*   [`ARCHITECTURE.md`](ARCHITECTURE.md) — Application architecture and internals.
+*   [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — Application architecture and internals.
 *   [`docs/ZORDER_POSTMORTEM.md`](docs/ZORDER_POSTMORTEM.md) — Deep dive into the multi-monitor fullscreen bug and its resolution.
 
 ---
